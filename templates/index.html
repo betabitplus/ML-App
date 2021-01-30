@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-auto">
+        <form id="upload-file-ResNetV2" method="post" enctype="multipart/form-data">
+            <label for="imageUploadResNetV2" class="upload-label">
+               Choose the document...
+            </label>
+            <input type="file" name="file" id="imageUploadResNetV2" accept=".tif">
+        </form>
+
+        <div class="image-section-ResNetV2" style="display:none;">
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict-ResNetV2">Classify the document!</button>
+        </div>
+
+        <div class="loaderResNetV2" style="display:none;"></div>
+
+        <div id="resultResNetV2">
+            <h3>Top 3 predicted labels:</h3>
+            <p id='topOneResult'></p>
+            <p id='topTwoResult'></p>
+            <p id='topThreeResult'></p>
+            <hr>
+            <p id='fileResult'></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
